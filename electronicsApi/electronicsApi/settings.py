@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'electronicsApi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'electronicsDb',
+        'NAME': 'electronicsApiDb',
         'USER': 'postgres',
         'PASSWORD': 'rofernan',
         'HOST': 'localhost',  # Cambia si usas un servidor remoto
@@ -133,11 +133,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Simple JWT configuracion
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
+        'rest_framework.authentication.SessionAuthentication',
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
-    "DEFAULT_PERMISSION_CLASSES": (
-        "rest_framework.permissions.IsAuthenticated",  # Protege toda la API
-    ),
+    # "DEFAULT_PERMISSION_CLASSES": (
+    #    "rest_framework.permissions.IsAuthenticated",  # Protege toda la API
+    # ),
 }
 
 # Configuración de comportamiento de token

@@ -1,3 +1,12 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as UA
+from .models import User
+
 
 # Register your models here.
+
+# admin.site.register(User, UserAdmin)
+
+@admin.register(User)
+class UserAdmin(UA):
+    pass

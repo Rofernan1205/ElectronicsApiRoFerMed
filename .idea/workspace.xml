@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="927bffe2-42dc-4efb-9a70-bd9701f133b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/electronicsApiRofermed.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/electronicsApi/auths/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/electronicsApi/auths/api/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/electronicsApi/documentations/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/electronicsApi/documentations/api/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/electronicsApi/users/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/electronicsApi/users/api/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/electronicsApi/users/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/auths/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/auths/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/electronicsApi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/electronicsApi/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/electronicsApi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/electronicsApi/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/users/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/users/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/users/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/users/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/users/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +43,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "main"
   }
 }]]></component>
   <component name="SharedIndexes">

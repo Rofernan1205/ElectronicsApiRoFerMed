@@ -17,11 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from users.api.urls import userRouter
+from categories.api.urls import categoryRouter
+from products.api.urls import productRouter
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('auths.api.urls')),
+    path('auth/', include('auths.api.urls')),
     path('doc/', include('documentations.api.urls')),
+    path('user/', include('users.api.urls')),
     path('', include(userRouter.urls)),
-    path('users/', include('users.api.urls')),
+    path('', include(categoryRouter.urls)),
+    path('', include(productRouter.urls)),
 ]

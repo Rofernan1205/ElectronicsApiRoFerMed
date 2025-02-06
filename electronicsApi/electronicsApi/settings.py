@@ -80,16 +80,26 @@ WSGI_APPLICATION = 'electronicsApi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+import os
+import dj_database_url
+from dotenv import load_dotenv
+
+load_dotenv()
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'electronicsApiDb',
-        'USER': 'postgres',
-        'PASSWORD': 'rofernan',
-        'HOST': 'localhost',  # Cambia si usas un servidor remoto
-        'PORT': '5432',  # Puerto por defecto de PostgreSQL
-    }
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'), conn_max_age=600)
 }
+
+# DATABASES = {
+#   'default': {
+#       'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'electronicsApiDb',
+#        'USER': 'postgres',
+#        'PASSWORD': 'rofernan',
+#        'HOST': 'localhost',  # Cambia si usas un servidor remoto
+#       'PORT': '5432',  # Puerto por defecto de PostgreSQL
+#    }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -136,9 +146,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
-    # "DEFAULT_PERMISSION_CLASSES": (
-    #    "rest_framework.permissions.IsAuthenticated",  # Protege toda la API
-    # ),
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.IsAuthenticated",  # Protege toda la API
+    ),
 }
 
 # Configuración de comportamiento de token
@@ -201,3 +211,17 @@ CORS_ALLOW_ALL_ORIGINS = True  # Para permitir todas las solicitudes (no recomen
 
 # Configuracion users
 AUTH_USER_MODEL = 'users.User'
+
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+# Configurar Cloudinary
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dshgodujh',
+    'API_KEY': '693122127585354',
+    'API_SECRET': 'HrALntVmWmvWprdZ_1mzej7yhHc',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

@@ -5,15 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="927bffe2-42dc-4efb-9a70-bd9701f133b3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/electronicsApi/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electronicsApi/categories/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electronicsApi/categories/api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electronicsApi/categories/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electronicsApi/categories/api/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electronicsApi/products/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electronicsApi/products/api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electronicsApi/products/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/electronicsApi/products/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electronicsApi/auths/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/auths/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/categories/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/categories/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/categories/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/categories/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/documentations/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/documentations/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/electronicsApi/electronicsApi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/electronicsApi/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/electronicsApi/electronicsApi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/electronicsApi/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electronicsApi/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electronicsApi/users/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/users/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/products/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/products/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/electronicsApi/users/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/users/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electronicsApi/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/users/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electronicsApi/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electronicsApi/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/electronicsApi/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,22 +41,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2sbM7W2dV0ROoSPFzn8Dz7Hl6qh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\PycharmProjects\electronicsApiRofermed\electronicsApi" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -63,5 +79,8 @@
       <updated>1738719654215</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
 </project>

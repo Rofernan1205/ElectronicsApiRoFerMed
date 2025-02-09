@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
+from dotenv import load_dotenv
+import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,6 +43,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework_simplejwt',
+    'cloudinary',
+    'cloudinary_storage',
     'products',
     'categories',
     'users',
@@ -80,9 +86,6 @@ WSGI_APPLICATION = 'electronicsApi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-import os
-import dj_database_url
-from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -100,6 +103,18 @@ DATABASES = {
 #       'PORT': '5432',  # Puerto por defecto de PostgreSQL
 #    }
 # }
+
+# Cloudinary
+
+load_dotenv()
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME':os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET')
+}
+
+# MEDIA_URL = '/media/'  # or any prefix you choose
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -213,15 +228,5 @@ CORS_ALLOW_ALL_ORIGINS = True  # Para permitir todas las solicitudes (no recomen
 AUTH_USER_MODEL = 'users.User'
 
 
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
 
-# Configurar Cloudinary
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dshgodujh',
-    'API_KEY': '693122127585354',
-    'API_SECRET': 'HrALntVmWmvWprdZ_1mzej7yhHc',
-}
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

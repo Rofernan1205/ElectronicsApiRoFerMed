@@ -19,8 +19,8 @@ class Product(models.Model):
     width = models.DecimalField(max_digits=6, decimal_places=3, blank=True, null=True, verbose_name="Width")
     country_origin = models.CharField(max_length=60, verbose_name="Country of origin")
     accessories = models.CharField(max_length=400, verbose_name="Accessories")
-    image = CloudinaryField('image')
-    img = CloudinaryField('img')
+    image = CloudinaryField('images', blank=True)
+    img = CloudinaryField('imgs', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="products")
 

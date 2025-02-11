@@ -26,6 +26,7 @@ urlpatterns = [
     path('auth/', include('auths.api.urls')),
     path('doc/', include('documentations.api.urls')),
     path('user/', include('users.api.urls')),
+    path('', include('products.api.urls')),
     path('', include(userRouter.urls)),
     path('', include(categoryRouter.urls)),
     path('', include(productRouter.urls)),

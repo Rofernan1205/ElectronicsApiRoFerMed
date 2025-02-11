@@ -1,0 +1,1 @@
+web: gunicorn electronicsApi.wsgi --log-file -

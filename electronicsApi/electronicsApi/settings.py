@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--mijf#!ln9fv2605_7vop+5lza*1&-na2xv_#5d0n%=%0p8f$n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # WhiteNoise debe estar aquí
     'django.contrib.sessions.middleware.SessionMiddleware',
     "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
@@ -64,6 +65,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'electronicsApi.urls'
+
+
 
 TEMPLATES = [
     {
@@ -90,7 +93,9 @@ WSGI_APPLICATION = 'electronicsApi.wsgi.application'
 load_dotenv()
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'), conn_max_age=600)
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'),
+                                      conn_max_age=600 , ssl_require=True)
+
 }
 
 # DATABASES = {
@@ -137,7 +142,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-es'
 
 TIME_ZONE = 'UTC'
 
@@ -148,7 +153,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+# Configuración de archivos estáticos
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"  # Aquí se guardarán los archivos con collectstatic
+
+# Si tienes archivos estáticos dentro de cada app
+STATICFILES_DIRS = [BASE_DIR / "static"]
+
+# WhiteNoise: optimización de archivos estáticos en producción
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# Configuración de archivos de medios (si usas imágenes, PDFs, etc.)
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -227,6 +246,13 @@ CORS_ALLOW_ALL_ORIGINS = True  # Para permitir todas las solicitudes (no recomen
 # Configuracion users
 AUTH_USER_MODEL = 'users.User'
 
+# Orígenes de confianza
+CSRF_TRUSTED_ORIGINS = ["https://miapp.up.railway.app"]
 
 
 
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+X_FRAME_OPTIONS = "DENY"
